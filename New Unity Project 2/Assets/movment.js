@@ -6,8 +6,8 @@
 
 var move = 5 ;
 
-var rotationspeed = 45;
 
+public var bullet: GameObject;
 
 function start () {
 
@@ -19,30 +19,28 @@ function Update () {
 //ship movment forward
 
 
-if (Input.GetKey(KeyCode.W))
+if (Input.GetKey(KeyCode.D))
 {
-GetComponent.<Rigidbody2D>().velocity.y = move;
+GetComponent.<Rigidbody2D>().velocity.x = move;
 
 }
 //ship moves backwards
-else if (Input.GetKey(KeyCode.S))
+else if (Input.GetKey(KeyCode.A))
 {
-GetComponent.<Rigidbody2D>().velocity.y = -move;
+GetComponent.<Rigidbody2D>().velocity.x = -move;
 
 }
 else{
 GetComponent.<Rigidbody2D>().velocity.y = 0;
 }
-//ship turns right
 
- if (Input.GetKey(KeyCode.A)){
-     GetComponent.<Rigidbody2D>().transform.Rotate(Vector3.forward * rotationspeed * Time.deltaTime);
 
-}
-//ship turns left
-else if (Input.GetKey(KeyCode.D)){
-     GetComponent.<Rigidbody2D>().transform.Rotate(Vector3.back * rotationspeed * Time.deltaTime);
 
+if (Input.GetKeyDown('space')){
+//makes it so i can shoot the bullet
+//quaternion.identity is pre made to account for physics
+
+Instantiate(bullet, transform.position, Quaternion.identity);
 }
 
 }
