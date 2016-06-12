@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/code_panic_project1.unity
+- path: Assets/code_panic.unity
   isLoaded: 1
   isActive: 1

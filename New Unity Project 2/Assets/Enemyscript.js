@@ -5,10 +5,14 @@ var speed = -10;
 function Start () {
 GetComponent.<Rigidbody2D>().velocity.y = speed;
 
-GetComponent.<Rigidbody2D>().angularVelocity = Random.Range(-200, 200);
+
 }
 
 function Update () {
+if(transform.position.y<-10)
+{
+Destroy(gameObject);
+}
 
 }
 // should destroy the object when it leaves lign of sight
@@ -19,7 +23,7 @@ function OnTriggerEnter2D(obj) {
    
     var name = obj.gameObject.name;
 
-   
+   //destroys the bullet and the object the bullet hits
     if (name == "bullet(Clone)") {
         
         Destroy(gameObject);

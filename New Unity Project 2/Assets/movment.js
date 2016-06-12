@@ -2,7 +2,7 @@
 
 
 
-#pragma strict
+#pragma implicit
 
 var move = 5 ;
 
@@ -31,16 +31,31 @@ GetComponent.<Rigidbody2D>().velocity.x = -move;
 
 }
 else{
-GetComponent.<Rigidbody2D>().velocity.y = 0;
+GetComponent.<Rigidbody2D>().velocity.x = 0;
 }
-
+if(transform.position.x<-9.5)
+{
+GetComponent.<Rigidbody2D>().velocity.x = 1;
+}
+if(transform.position.x>9.5)
+{
+GetComponent.<Rigidbody2D>().velocity.x = -1;
+}
 
 
 if (Input.GetKeyDown('space')){
 //makes it so i can shoot the bullet
-//quaternion.identity is pre made to account for physics
+//quaternion.identity is pre made to account for rotation
 
 Instantiate(bullet, transform.position, Quaternion.identity);
+}
+if (transform.position.x == 6)
+{
+GetComponent.<Rigidbody2D>().velocity.x = 0;
+}
+if (transform.position.x == -6)
+{
+GetComponent.<Rigidbody2D>().velocity.x = 0;
 }
 
 }

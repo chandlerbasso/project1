@@ -1,8 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/movment.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Enemyscript.js">
     <Files>
-      <File FileName="Assets/movment.js" Line="6" Column="27" />
+      <File FileName="Assets/loadgame.js" Line="6" Column="1" />
+      <File FileName="Assets/movment.js" Line="40" Column="1" />
+      <File FileName="Assets/bulletshoot.js" Line="13" Column="27" />
+      <File FileName="Assets/Enemyscript.js" Line="14" Column="21" />
+      <File FileName="Assets/point.js" Line="6" Column="36" />
+      <File FileName="Assets/playerhealth.js" Line="10" Column="33" />
+      <File FileName="Assets/gamescore.js" Line="17" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
